@@ -3,6 +3,7 @@ package com.leve.controller;
 import com.leve.DTO.ClienteDTO;
 import com.leve.model.entities.Cliente;
 import com.leve.model.service.ClienteService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
+@AllArgsConstructor
 @RequestMapping("/api/cliente")
 public class ClienteController {
     private ClienteService clienteService;
