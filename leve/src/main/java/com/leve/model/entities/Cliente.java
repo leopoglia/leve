@@ -4,16 +4,21 @@ import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
 @ToString
+@Table(name = "cliente")
 public class Cliente {
     @Id
-    @Column(length = 11, unique = true)
+    @Column(length = 11, unique = true, nullable = false)
     private String cpf;
-    private String nome;
+    @Column(length = 100, nullable = false)
+    private String nomeCompleto;
+    @Column(length = 10, nullable = false)
     private String dataNascimento;
-    private Integer numeroPassaporte;
+    @Column(length = 8, unique = true)
+    private String codigoPassaporte;
 }
