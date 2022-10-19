@@ -44,8 +44,4 @@ public class LocalizacaoController {
         return ResponseEntity.status(HttpStatus.OK).body("DELETADO.");
     }
 
-    public boolean existsById(Integer integer) {
-        return localizacaoService.existsById(integer);
-    }
-
 }
