@@ -14,7 +14,6 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
-@AllArgsConstructor
 @Controller
 @RequestMapping("/api/cliente")
 public class ClienteController {
@@ -43,10 +42,6 @@ public class ClienteController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(clienteService.findById(cpf));
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Erro! Nenhum cliente com este cpf!");
-    }
-
-    public boolean existsById(String s) {
-        return clienteService.existsById(s);
     }
 
     @DeleteMapping("/{cpf}")
