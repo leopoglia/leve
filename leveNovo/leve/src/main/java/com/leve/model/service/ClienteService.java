@@ -3,6 +3,7 @@ package com.leve.model.service;
 import com.leve.model.entities.Cliente;
 import com.leve.repository.ClienteRepository;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class ClienteService {
     private ClienteRepository clienteRepository;
 

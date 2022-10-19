@@ -3,6 +3,7 @@ package com.leve.model.entities;
 import lombok.*;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,6 +12,7 @@ import javax.persistence.Table;
 @Getter @Setter
 @ToString
 @Table(name = "cliente")
+@Entity
 public class Cliente {
     @Id
     @Column(length = 11, unique = true, nullable = false)
