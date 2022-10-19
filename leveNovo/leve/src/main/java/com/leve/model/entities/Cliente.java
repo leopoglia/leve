@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @ToString
 @Table(name = "cliente")
 @Entity
+@EqualsAndHashCode
 public class Cliente {
     @Id
     @Column(length = 11, unique = true, nullable = false)
