@@ -11,7 +11,6 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
 public class ClienteService {
     private ClienteRepository clienteRepository;
 
