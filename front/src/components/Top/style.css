@@ -1,6 +1,6 @@
 .top-app {
     background-color: var(--orange);
-    height: 366px;
+    height: 375px;
     width: 100%;
     padding-top: 30px;
 }
@@ -43,7 +43,7 @@
     background-color: white;
     border-radius: 6px;
     margin: 10px 15%;
-    height: 80%;
+    height: 265px;
 }
 
 .top-app .box input {
