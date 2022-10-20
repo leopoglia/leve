@@ -3,13 +3,25 @@
     height: 375px;
     width: 100%;
     padding-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.aviao{
+    position: absolute;
+    left: 0;
+    margin-left: 5%;
+    margin-top: 18px;
+}
+
+.top-app  .box-background{
+    width: 50%;
 }
 
 .top-app dl {
     margin: 0px;
     color: white;
     display: flex;
-    margin: 0px 15%;
 }
 
 .top-app dl dd {
@@ -42,7 +54,8 @@
     padding: 20px;
     background-color: white;
     border-radius: 6px;
-    margin: 10px 15%;
+    margin-right: 15%;
+    margin-top: 10px;
     height: 265px;
 }
 
