@@ -3,6 +3,7 @@ package com.leve.controller;
 import com.leve.DTO.AssentoDTO;
 import com.leve.model.entities.Assento;
 import com.leve.model.service.AssentoService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/api/assento")
+@AllArgsConstructor
 public class AssentoController {
     AssentoService assentoService;
 
