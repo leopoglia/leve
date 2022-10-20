@@ -16,7 +16,7 @@ public class Transporte {
     private String identificador;
     @Column(nullable = false)
     private Integer numeroAssentos;
-    @OneToMany
-    @JoinColumn(name = "codigo_assento")
+    @ManyToOne
+    @JoinColumn(name = "codigo_Assento")
     private Assento assento;
 }

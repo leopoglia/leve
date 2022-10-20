@@ -17,7 +17,7 @@ public class Assento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, unique = true)
-    private Integer codigo;
+    private Integer codigoAssento;
 
     @Column(nullable = false)
     private Integer numeroAssento;
