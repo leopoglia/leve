@@ -1,7 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
 
-*{
+* {
   box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #d1d1d1 #ec6409;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ec6409;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 0px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #bdbdbd;
 }
 
 body {
@@ -9,10 +31,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 :root {
-  --orange: #EC6408;
+  --orange: rgb(236, 100, 9);
   --orange-hover: rgb(239, 122, 44);
 
 }

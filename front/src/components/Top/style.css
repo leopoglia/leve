@@ -144,6 +144,6 @@
 }
 
 .top-app .box .pass .most:hover,
-.top-app .box .pass .less:hover{
+.top-app .box .pass .less:hover {
     background-color: var(--orange-hover);
 }
