@@ -54,4 +54,16 @@ public class ClienteController {
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Erro! Nenhum cliente com este cpf!");
     }
+
+    @PutMapping("/{cpf}")
+    public ResponseEntity<Object> update(@RequestBody @Valid ClienteDTO clienteDTO, @PathVariable(value = "cpf") String cpf) {
+        Optional<Cliente> clienteOptional = clienteService.findById(cpf);
+        if(clienteOptional.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Erro! Nenhum cliente com este cpf!");
+        }
+
+        Cliente cliente = new Cliente();
+        BeanUtils.copyProperties(clienteDTO, cliente);
+        return  ResponseEntity.status(HttpStatus.OK).body(clienteService.save(cliente));
+    }
 }

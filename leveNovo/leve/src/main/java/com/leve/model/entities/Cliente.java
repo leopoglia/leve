@@ -9,11 +9,10 @@ import javax.persistence.Table;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter @Setter
-@ToString
+@Getter @Setter @ToString
 @Table(name = "cliente")
-@Entity
 @EqualsAndHashCode
+@Entity
 public class Cliente {
     @Id
     @Column(length = 11, unique = true, nullable = false)
