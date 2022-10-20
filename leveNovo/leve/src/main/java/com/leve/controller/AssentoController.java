@@ -45,9 +45,15 @@ public class AssentoController {
         assentoService.deleteById(codigoAssento);
         return ResponseEntity.status(HttpStatus.OK).body("DELETADO.");
     }
-
-    public boolean existsById(Integer integer) {
-        return assentoService.existsById(integer);
+    
+    @PutMapping("/{codigoAssento}")
+    public ResponseEntity<Object> update(@PathVariable(value= "codigoAssento") Integer codigoAssento, @RequestBody @Valid AssentoDTO assentoDTO) {
+        if(!assentoService.existsById(codigoAssento)){
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Erro! Já existe um assento com este identificador!");
+        }
+        Assento assento = new Assento();
+        BeanUtils.copyProperties(assentoDTO, assento);
+        return ResponseEntity.status(HttpStatus.CREATED).body(assentoService.save(assento));
     }
 
 }
