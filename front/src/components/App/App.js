@@ -1,6 +1,6 @@
 import './App.css';
-import Header from './components/Header';
-import Top from './components/Top';
+import Header from '../Header';
+import Top from '../Top';
 
 export default function App() {
   return (
