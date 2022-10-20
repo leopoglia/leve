@@ -11,6 +11,7 @@ import javax.persistence.*;
 @EqualsAndHashCode
 @Entity
 public class Transporte {
+    @Id
     @Column(length = 8, unique = true, nullable = false)
     private String identificador;
     @Column(nullable = false)
