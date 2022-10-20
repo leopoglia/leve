@@ -8,19 +8,19 @@ export default function Header() {
             <dl>
 
                 <dd>
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                         search
                     </span>
                 </dd>
 
                 <dd>
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                         home
                     </span>
                 </dd>
 
                 <dd>
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                         login
                     </span>
                 </dd>

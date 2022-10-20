@@ -1,24 +1,35 @@
 import './style.css';
-
+import { useState } from 'react';
 export default function Header() {
+
+    const [vehicle, setVehicle] = useState(false);
+
+    console.log(vehicle);
+
     return (
         <div className="top-app">
             <dl>
-                <dd>
-                    <span class="material-symbols-outlined">
+                <dd onClick={() => {
+                    setVehicle("air")
+                }}>
+                    <span className="material-symbols-outlined">
                         flight_takeoff
                     </span>
                     Avião
                 </dd>
-                <dd>
-                    <span class="material-symbols-outlined">
+                <dd onClick={() => {
+                    setVehicle("train")
+                }}>
+                    <span className="material-symbols-outlined">
                         train
                     </span>
                     Trem
                 </dd>
 
-                <dd>
-                    <span class="material-symbols-outlined">
+                <dd onClick={() => {
+                    setVehicle("bus")
+                }}>
+                    <span className="material-symbols-outlined">
                         airport_shuttle
                     </span>
                     Ônibus
@@ -32,7 +43,7 @@ export default function Header() {
                     <div className='de'>
                         <div className='label'>
                             <label>De</label>
-                            <span class="material-symbols-outlined">
+                            <span className="material-symbols-outlined">
                                 north_east
                             </span>
                         </div>
@@ -40,7 +51,7 @@ export default function Header() {
                     </div>
 
                     <div className='sync'>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             sync_alt
                         </span>
                     </div>
@@ -49,7 +60,7 @@ export default function Header() {
                         <div className='label'>
                             <label>Para</label>
 
-                            <span class="material-symbols-outlined">
+                            <span className="material-symbols-outlined">
                                 south_east
                             </span>
                         </div>
@@ -66,7 +77,7 @@ export default function Header() {
                         </div>
 
                         <div className='data-sync'>
-                            <span class="material-symbols-outlined">
+                            <span className="material-symbols-outlined">
                                 follow_the_signs
                             </span>
                         </div>
