@@ -18,5 +18,5 @@ public class Transporte {
     private Integer numeroAssentos;
     @OneToMany
     @JoinColumn(name = "codigo_assento")
-    private Integer codigoAssento;
+    private Assento assento;
 }
