@@ -19,6 +19,9 @@ public class Localizacao {
     private Integer codigoLocalizacao;
 
     @Column(nullable = false)
+    private String descricao;
+
+    @Column(nullable = false)
     private String localizacao;
 
 }
