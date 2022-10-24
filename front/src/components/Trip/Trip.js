@@ -44,7 +44,10 @@ export default function Trip() {
                             </div>
                         </div>
 
-                        <div className="price">R$ 2.500,00</div>
+                        <div className="price-buy">
+                            <div className="price">R$ 2.500,00</div>
+                            <button>COMPRAR</button>
+                        </div>
                     </div>
                 </div>
 

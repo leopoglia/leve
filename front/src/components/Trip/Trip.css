@@ -29,6 +29,7 @@
 
 .Trip .name{
     margin-right: 50px;
+    display: grid;
 }
 
 .Trip .infos{
@@ -48,4 +49,21 @@
     display: flex;
     align-items: center;
     margin-top: 30px;
+}
+
+.Trip .price-buy{
+    display: flex;
+    align-items: center;
+}
+
+.Trip .price-buy button{
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    margin-left: 50px;
+    font-weight: 600;
+    color: var(--orange);
+    cursor: pointer;
+    outline: none;
 }
