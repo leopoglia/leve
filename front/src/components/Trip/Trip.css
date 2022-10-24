@@ -25,3 +25,9 @@
 .Trip .name{
     margin-right: 50px;
 }
+
+.Trip .de-para, .Trip .date{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
