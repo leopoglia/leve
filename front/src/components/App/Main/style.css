@@ -1,0 +1,59 @@
+.main-app {
+    height: 100%;
+    width: 100%;
+    padding-top: 30px;
+}
+
+
+.main-app .trips {
+    height: 100%;
+    margin: 0 5%;
+    color: rgb(50, 50, 50);
+}
+
+.main-app .trips-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-app .trip{
+    width: 32%;
+}
+
+.main-app .trip img:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+.main-app .trip .nome-trip{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.main-app .trip img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+@media(max-width: 850px){
+    .main-app .trips .trips-list{
+        display: block;
+    }
+
+    .main-app .trip{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-app .trips img{
+        width: 100%;
+    }
+
+    .main-app .trips .nome-trip{
+        width: 100%;
+    }
+}

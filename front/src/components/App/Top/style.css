@@ -1,0 +1,202 @@
+.top-app {
+    background-color: var(--orange);
+    height: 375px;
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.air-plane{
+    position: absolute;
+    left: 0;
+    margin-left: 2%;
+    margin-top: 18px;
+    width: 45%;
+}
+
+.train, .bus{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 477px;
+}
+
+.train{
+    width: 400px;
+    margin-top: 90px;
+    margin-left: 70px;
+    transform: scaleX(-1);
+}
+
+.bus{
+    width: 500px;
+    margin-top: 60px;
+    margin-left: 45px;
+}
+
+.top-app  .box-background{
+    width: 50%;
+}
+
+.top-app dl {
+    margin: 0px;
+    color: white;
+    display: flex;
+}
+
+.top-app dl dd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-right: 15px;
+}
+
+.top-app label {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(59, 59, 59);
+}
+
+.top-app dl dd:hover {
+    background-color: rgba(255, 255, 255, 0.144);
+}
+
+.top-app dl dd .material-symbols-outlined {
+    padding-right: 6px !important;
+}
+
+.top-app .box {
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+    margin-right: 15%;
+    margin-top: 10px;
+    height: 265px;
+}
+
+.top-app .box input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    width: 100%;
+
+}
+
+.top-app .box .busca,
+.top-app .box .data {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.top-app .box .busca .de,
+.top-app .box .busca .para,
+.top-app .box .data .ida,
+.top-app .box .data .volta {
+    display: grid;
+    width: 100%;
+}
+
+.top-app .box .sync,
+.top-app .box .data-sync {
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.top-app .box .data-sync {
+    color: white;
+}
+
+.footer-box {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-box input[type="button"] {
+    margin-left: 30px;
+}
+
+.top-app input[type="date"] {
+    color: #757575 !important;
+}
+
+.top-app .box .get {
+    background-color: var(--orange);
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.top-app .box .get:hover {
+    background-color: var(--orange-hover);
+}
+
+.top-app .box .pass .number {
+    display: flex;
+}
+
+.top-app .box .label {
+    display: flex;
+    align-items: center;
+}
+
+.top-app .box .pass input {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    text-align: center;
+}
+
+.top-app .box .pass input::-webkit-outer-spin-button,
+.top-app .box .pass input::-webkit-inner-spin-button {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+.top-app .box .pass .most,
+.top-app .box .pass .less {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--orange);
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.top-app .box .pass .most:hover,
+.top-app .box .pass .less:hover {
+    background-color: var(--orange-hover);
+}
+
+
+@media(max-width: 850px){
+    .top-app img{
+        display: none;
+    }
+
+    .top-app .box-background{
+        width: auto;
+    }
+
+    .top-app .box {
+        margin-right: 0px !important;
+    }
+
+    .top-app{
+        justify-content: center;
+    }
+}

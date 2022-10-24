@@ -1,0 +1,12 @@
+.Trip main{
+    background-color: var(--orange);
+    height: 375px;
+    width: 100%;
+    padding: 50px;
+}
+
+.Trip h1{
+    margin: 0;
+    color: #fff;
+    font-size: 50px;
+}
