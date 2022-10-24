@@ -1,3 +1,8 @@
+.Trip{
+    min-height: 100vh;
+    height: 100vh;
+}
+
 .Trip main{
     background-color: var(--orange);
     height: 375px;
@@ -24,6 +29,19 @@
 
 .Trip .name{
     margin-right: 50px;
+}
+
+.Trip .infos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.Trip .infos .price{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .Trip .de-para, .Trip .date{
