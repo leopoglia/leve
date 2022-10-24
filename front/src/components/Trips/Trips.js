@@ -1,5 +1,6 @@
 import Header from "../App/Header";
 import Main from "./Main";
+import Footer from "../App/Footer";
 import "./Trips.css"
 
 export default function Trips() {
@@ -8,6 +9,7 @@ export default function Trips() {
 
             <Header />
             <Main />
+            <Footer />
         </div>
     );
 }

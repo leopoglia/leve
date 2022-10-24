@@ -1,9 +1,9 @@
-.Trip{
+.Trip {
     min-height: 100vh;
     height: 100vh;
 }
 
-.Trip main{
+.Trip main {
     background-color: var(--orange);
     height: 375px;
     width: 100%;
@@ -12,51 +12,57 @@
     justify-content: space-between;
 }
 
-.Trip main img{
+.Trip main img {
     width: 40%;
     border-radius: 20px;
 }
 
-.Trip main span{
+.Trip main .desc {
+    height: 90px;
+    overflow: auto;
+}
+
+.Trip main span {
     color: #fff;
 }
 
-.Trip .name h1{
+.Trip .name h1 {
     margin: 0;
     color: #fff;
     font-size: 50px;
 }
 
-.Trip .name{
+.Trip .name {
     margin-right: 50px;
     display: grid;
 }
 
-.Trip .infos{
+.Trip .infos {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-.Trip .infos .price{
+.Trip .infos .price {
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
 }
 
-.Trip .de-para, .Trip .date{
+.Trip .de-para,
+.Trip .date {
     display: flex;
     align-items: center;
     margin-top: 30px;
 }
 
-.Trip .price-buy{
+.Trip .price-buy {
     display: flex;
     align-items: center;
 }
 
-.Trip .price-buy button{
+.Trip .price-buy button {
     width: 200px;
     border-radius: 5px;
     border: none;
@@ -69,6 +75,59 @@
     outline: none;
 }
 
-.Trip .price-buy button:hover{
+.Trip .price-buy button:hover {
     background-color: rgb(240, 240, 240);
+}
+
+
+@media(max-width: 1250px) {
+    .Trip .price-buy {
+        display: block;
+    }
+
+    .Trip .price-buy button {
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 950px) {
+    .Trip .name h1 {
+        font-size: 40px;
+    }
+
+    .Trip main {
+        display: block;
+        height: auto;
+    }
+
+    .Trip main img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .Trip .name {
+        margin-right: 0;
+    }
+}
+
+@media(max-width: 550px) {
+
+    .Trip .infos {
+        display: block;
+    }
+
+    .Trip .price-buy {
+        margin-top: 20px;
+    }
+
+    .Trip .price-buy button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+
+    .Trip .infos .price {
+        display: flex;
+        justify-content: flex-end;
+    }
 }

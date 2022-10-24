@@ -14,12 +14,12 @@ export default function Trip() {
                 <div className="name">
                     <h1>Coliseu de Roma</h1>
 
-                    <span>
+                    <span className="desc">
                         Coliseu, também conhecido como Anfiteatro Flaviano, é um anfiteatro oval localizado no centro da cidade de Roma, capital da Itália. Construído com tijolos revestidos de argamassa e areia, e originalmente cobertos com travertino é o maior anfiteatro já construído e está situado a leste do Fórum Romano.
                     </span>
 
                     <div className="infos">
-                        <div>
+                        <div className="de-date">
                             <div className="de-para">
                                 <span className="material-symbols-outlined">
                                     trip_origin
