@@ -3,10 +3,25 @@
     height: 375px;
     width: 100%;
     padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Trip main img{
+    width: 40%;
+    border-radius: 20px;
+}
+
+.Trip main span{
+    color: #fff;
 }
 
 .Trip h1{
     margin: 0;
     color: #fff;
     font-size: 50px;
+}
+
+.Trip .name{
+    margin-right: 50px;
 }

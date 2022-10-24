@@ -4,13 +4,3 @@
   min-height: 100vh;
 }
 
-.footer-app{
-  width: 100%;
-  height: 50px;
-  margin-top: 60px;
-  background-color: var(--orange);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

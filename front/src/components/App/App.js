@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Header';
 import Top from './Top';
 import Main from './Main';
+import Footer from './Footer';
 
 export default function App() {
   return (
@@ -9,11 +10,7 @@ export default function App() {
       <Header />
       <Top />
       <Main />
-
-
-      <footer className='footer-app'>
-        <p>Todos os direitos reservados <b>LEVE</b> ©</p>
-      </footer>
+      <Footer />
 
     </div>
   );
