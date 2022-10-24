@@ -21,7 +21,7 @@
     color: #fff;
 }
 
-.Trip h1{
+.Trip .name h1{
     margin: 0;
     color: #fff;
     font-size: 50px;
