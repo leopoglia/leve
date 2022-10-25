@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 export default function Admin() {
-    const [input, setInput] = useState(<form>
+    const [input, setInput] = useState(<div className="form">
         <label>Local Embarque</label>
         <input type="text" />
 
@@ -21,22 +21,20 @@ export default function Admin() {
         <input type="text" />
 
         <button>Cadastrar</button>
-    </form>);
-
-
+    </div>);
 
 
     return (
         <div className="Admin">
             <Header />
 
-            <main></main>
+            <main />
 
 
             <div className="actions">
 
                 <div className="action" onClick={() => {
-                    setInput(<form>
+                    setInput(<div className="form">
                         <label>Local Embarque</label>
                         <input type="text" />
 
@@ -53,7 +51,7 @@ export default function Admin() {
                         <input type="text" />
 
                         <button>Cadastrar</button>
-                    </form>)
+                    </div>)
                 }}>
                     <div>
                         <span class="material-symbols-outlined">
@@ -64,12 +62,12 @@ export default function Admin() {
                 </div>
                 <div className="action" onClick={() => {
                     setInput(
-                        <form>
+                        <div className="form">
                             <label>Números de assentos</label>
                             <input type="text" />
 
                             <button>Cadastrar</button>
-                        </form>)
+                        </div>)
                 }}>
                     <div>
                         <span class="material-symbols-outlined">
@@ -80,7 +78,7 @@ export default function Admin() {
                 </div>
                 <div className="action" onClick={() => {
                     setInput(
-                        <form>
+                        <div className="form">
                             <label>Nome localização</label>
                             <input type="text" />
 
@@ -95,7 +93,7 @@ export default function Admin() {
 
 
                             <button>Cadastrar</button>
-                        </form>
+                        </div>
                     )
                 }}>
                     <div>
