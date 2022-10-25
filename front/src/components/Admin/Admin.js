@@ -1,28 +1,21 @@
 import "./Admin.css";
 import Header from "../App/Header";
+import Services from "../../service/service.ts";
 import { useState } from "react";
 
 
 export default function Admin() {
-    const [input, setInput] = useState(<div className="form">
-        <label>Local Embarque</label>
-        <input type="text" />
+    const [input, setInput] = useState();
 
-        <label>Local Dembarque</label>
-        <input type="text" />
 
-        <label>Data Saída</label>
-        <input type="text" />
+    const [embarque, setEmbarque] = useState();
 
-        <label>Data Cheagada</label>
-        <input type="text" />
+    function cadastrarViagem() {
+        console.log("aaaaaaaa")
+        console.log(embarque)
+        Services.cadastrarViagem(input);
 
-        <label>Preço</label>
-        <input type="text" />
-
-        <button>Cadastrar</button>
-    </div>);
-
+    }
 
     return (
         <div className="Admin">
@@ -35,26 +28,47 @@ export default function Admin() {
 
                 <div className="action" onClick={() => {
                     setInput(<div className="form">
-                        <label>Local Embarque</label>
-                        <input type="text" />
+                        <label >Local Embarque</label>
+                        <input type="text"
+                            onChange={event => {
+                                setEmbarque(event.target.value);
+                                console.log(event.target.value)
+                            }}
+                        />
 
                         <label>Local Dembarque</label>
-                        <input type="text" />
+                        <input type="text" onChange={event => {
+                            this.setState({
+                                localDembarque: event.target.value
+                            });
+                        }} />
 
                         <label>Data Saída</label>
-                        <input type="text" />
+                        <input type="text" onChange={event => {
+                            this.setState({
+                                dataSaida: event.target.value
+                            });
+                        }} />
 
                         <label>Data Cheagada</label>
-                        <input type="text" />
+                        <input type="text" onChange={event => {
+                            this.setState({
+                                dataChegada: event.target.value
+                            });
+                        }} />
 
                         <label>Preço</label>
-                        <input type="text" />
+                        <input type="text" onChange={event => {
+                            this.setState({
+                                preco: event.target.value
+                            });
+                        }} />
 
-                        <button>Cadastrar</button>
+                        <button onClick={() => { cadastrarViagem() }}>Cadastrar</button>
                     </div>)
                 }}>
                     <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             hotel
                         </span>
                         Viagem
@@ -70,7 +84,7 @@ export default function Admin() {
                         </div>)
                 }}>
                     <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             transportation
                         </span>
                         Transporte
@@ -97,7 +111,7 @@ export default function Admin() {
                     )
                 }}>
                     <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             location_on
                         </span>
                         Localização
