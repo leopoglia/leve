@@ -3,6 +3,7 @@ package com.leve.model.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +17,7 @@ public class Transporte {
     private String identificador;
     @Column(nullable = false)
     private Integer numeroAssentos;
-    @ManyToOne
-    @JoinColumn(name = "codigo_Assento")
-    private Assento assento;
+    @OneToMany
+    @JoinColumn(name = "codigo_Assentos")
+    private List<Assento> assentos;
 }

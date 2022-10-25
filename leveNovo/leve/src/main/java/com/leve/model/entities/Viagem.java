@@ -46,4 +46,8 @@ public class Viagem {
     @Column(nullable = false)
     private Double valor;
 
+    @OneToOne
+    @JoinColumn(name = "codigo_Transporte")
+    private Transporte transporte;
+
 }

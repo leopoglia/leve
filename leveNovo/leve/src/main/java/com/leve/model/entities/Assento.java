@@ -20,7 +20,7 @@ public class Assento {
     private Integer codigoAssento;
 
     @Column(nullable = false)
-    private Integer numeroAssento;
+    private Boolean ocupado;
 }
 
 
