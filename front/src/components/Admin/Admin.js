@@ -7,8 +7,7 @@ import { useState } from "react";
 export default function Admin() {
     const [input, setInput] = useState();
 
-
-    const [embarque, setEmbarque] = useState();
+    const [embarque, setEmbarque] = useState("aaa");
 
     function cadastrarViagem() {
         console.log("aaaaaaaa")
@@ -32,16 +31,12 @@ export default function Admin() {
                         <input type="text"
                             onChange={event => {
                                 setEmbarque(event.target.value);
-                                console.log(event.target.value)
                             }}
                         />
+                        {embarque}
 
                         <label>Local Dembarque</label>
-                        <input type="text" onChange={event => {
-                            this.setState({
-                                localDembarque: event.target.value
-                            });
-                        }} />
+                        <input type="text" />
 
                         <label>Data Saída</label>
                         <input type="text" onChange={event => {
