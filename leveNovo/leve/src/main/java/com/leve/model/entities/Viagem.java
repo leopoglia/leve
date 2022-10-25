@@ -27,8 +27,8 @@ public class Viagem {
     @Column(nullable = false)
     private Integer localDesembarque;
 
-    @Column
     @OneToMany
+    @JoinColumn(name = "codigo_Parada")
     private List<Localizacao> paradas;
 
     @Column(nullable = false)
@@ -38,10 +38,10 @@ public class Viagem {
     private Date dataChegada;
 
     @Column(nullable = false)
-    private Time horaSaida;
+    private String horaSaida;
 
     @Column(nullable = false)
-    private Time horaChegada;
+    private String horaChegada;
 
     @Column(nullable = false)
     private Double valor;

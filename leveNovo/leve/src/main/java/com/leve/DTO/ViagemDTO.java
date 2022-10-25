@@ -15,7 +15,7 @@ public class ViagemDTO {
     private List<Localizacao> paradas;
     private Date dataSaida;
     private Date dataChegada;
-    private Time horaSaida;
-    private Time horaChegada;
+    private String horaSaida;
+    private String horaChegada;
     private double valor;
 }
