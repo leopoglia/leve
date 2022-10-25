@@ -21,15 +21,13 @@ public class Viagem {
     @Column(nullable = false, unique = true)
     private Integer codigoViagem;
 
-    @Column(nullable = false)
-    private String localEmbarque;
+    @OneToOne
+    @JoinColumn(name = "codigoLocalizacaoEmbarque")
+    private Localizacao localEmbarque;
 
-    @Column(nullable = false)
-    private String localDesembarque;
-
-    @OneToMany
-    @JoinColumn(name = "codigo_Parada")
-    private List<Localizacao> paradas;
+    @OneToOne
+    @JoinColumn(name = "codigoLocalizacaoDesembarque")
+    private Localizacao localDesembarque;
 
     @Column(nullable = false)
     private Date dataSaida;

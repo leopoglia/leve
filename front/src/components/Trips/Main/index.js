@@ -1,7 +1,22 @@
 import "./style.css"
 import Trip from "../Trip";
+import { useState, useEffect } from "react";
+import Services from "../../../service/service.ts";
 
 export default function Main() {
+
+    const [lista, setLista] = useState([]);
+
+    useEffect(() => {
+        Services.buscarViagens().then((response) => {
+            setLista(response);
+            console.log(response);
+            console.log(response[0].localEmbarque);
+        });
+    }, []);
+
+
+
     return (
         <div className="main-trips">
             <div className="title">
@@ -10,15 +25,12 @@ export default function Main() {
             </div>
 
             <div className='trips-list'>
-                <Trip />
-                <Trip />
-                <Trip />
-                <Trip />
-                <Trip />
-                <Trip />
-                <Trip />
-                <Trip />
-                <Trip />
+                {lista.map((item) => {
+                    return (
+                        <Trip nome={item.localDesembarque.localizacao} imagem={item.localDesembarque.imagem} />
+                    )
+                }
+                )}
 
             </div>
         </div>

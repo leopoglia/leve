@@ -15,8 +15,8 @@ export default function Admin() {
 
     function cadastrarViagem() {
         const viagem = {
-            embarque: embarque,
-            desembarque: desembarque,
+            embarque: parseInt(embarque),
+            desembarque:  parseInt(desembarque),
             saida: saida,
             chegada: chegada,
             valor: valor,

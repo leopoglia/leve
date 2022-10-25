@@ -1,6 +1,7 @@
 package com.leve.DTO;
 
 import com.leve.model.entities.Localizacao;
+import com.leve.model.entities.Transporte;
 import lombok.Getter;
 
 import java.sql.Time;
@@ -10,8 +11,8 @@ import java.util.List;
 @Getter
 public class ViagemDTO {
     private Integer codigoViagem;
-    private String localEmbarque;
-    private String localDesembarque;
+    private Localizacao localEmbarque;
+    private Localizacao localDesembarque;
     private List<Localizacao> paradas;
     private Date dataSaida;
     private Date dataChegada;

@@ -24,4 +24,5 @@ public class LocalizacaoViagem {
     @ManyToOne
     @JoinColumn(name = "codigo_Localizacao")
     private Localizacao localizacao;
+
 }
