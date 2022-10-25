@@ -17,7 +17,7 @@
     margin-top: -50px;
 }
 
-.Admin .actions .action{
+.Admin .actions .action {
     color: var(--orange);
     width: 25%;
     height: 250px;
@@ -30,14 +30,54 @@
     font-size: 30px;
 }
 
-.Admin .actions .action:hover{
+.Admin .actions .action:hover {
     cursor: pointer;
     background-color: rgb(240, 240, 240);
 }
 
-.Admin .actions .action .material-symbols-outlined{
+.Admin .actions .action .material-symbols-outlined {
     display: grid;
     align-items: center;
     justify-content: center;
     font-size: 50px;
+}
+
+.Admin form {
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 20px;
+}
+
+.Admin form input, .Admin form #img {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+.Admin form #img{
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.Admin form input[type="file"]{
+    display: none;
+}
+
+.Admin form button{
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: var(--orange);
+    color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.Admin .flex{
+    display: grid;
 }
