@@ -27,13 +27,7 @@ public class ViagemController {
         System.out.println(viagemDTO.getLocalDesembarque());
         System.out.println(viagemDTO.getLocalEmbarque());
 
-        System.out.println(viagemDTO.getLocalEmbarque() + " " + viagemDTO.getLocalDesembarque());
         BeanUtils.copyProperties(viagemDTO, viagem);
-
-        System.out.println(viagem.getLocalDesembarque() + " " + viagem.getLocalEmbarque());
-
-        System.out.println(viagem.getLocalDesembarque());
-        System.out.println(viagem.getLocalEmbarque());
 
         return ResponseEntity.status(HttpStatus.CREATED).body(viagemService.save(viagem));
     }

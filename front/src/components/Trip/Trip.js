@@ -3,7 +3,28 @@ import Footer from "../App/Footer";
 import Main from "../App/Main";
 import "./Trip.css"
 
+import { useState, useEffect } from "react";
+import Services from "../../service/service.ts";
+
 export default function Trip() {
+
+
+
+
+    const [trip, setTrip] = useState({});
+
+    useEffect(() => {
+        Services.buscarViagens().then((response) => {
+            setTrip(response);
+            console.log(response);
+            console.log(response[0].codigoViagem);
+        });
+    }, []);
+
+    var url_atual = window.location.href;
+
+
+
     return (
         <div className="Trip">
 

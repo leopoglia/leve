@@ -11,7 +11,7 @@ export default function Main() {
         Services.buscarViagens().then((response) => {
             setLista(response);
             console.log(response);
-            console.log(response[0].localEmbarque);
+            console.log(response[0].codigoViagem);
         });
     }, []);
 
@@ -27,7 +27,7 @@ export default function Main() {
             <div className='trips-list'>
                 {lista.map((item) => {
                     return (
-                        <Trip nome={item.localDesembarque.localizacao} imagem={item.localDesembarque.imagem} />
+                        <Trip link={item.codigoViagem} nome={item.localDesembarque.localizacao} imagem={item.localDesembarque.imagem} />
                     )
                 }
                 )}

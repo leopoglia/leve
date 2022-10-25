@@ -4,8 +4,6 @@ export default function Header() {
 
     const [vehicle, setVehicle] = useState(<img className='air-plane' src="https://www.pngkey.com/png/full/373-3731596_com-a-ajuda-de-seu-mentor-skipper-o.png" alt="" />);
 
-    console.log(vehicle);
-
     return (
         <div className="top-app">
 
