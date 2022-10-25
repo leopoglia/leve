@@ -12,7 +12,12 @@
 
 .header-app dl{
     display: flex;
-    color: white;
+    color: white !important;
+}
+
+.link{
+    text-decoration: none;
+    color: white !important;
 }
 
 .header-app dl dd{

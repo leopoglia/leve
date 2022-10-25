@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import './style.css';
 
-
 export default function Header() {
     return (
         <div className="header-app">
@@ -11,11 +10,13 @@ export default function Header() {
 
             <dl>
 
-                <dd>
-                    <span className="material-symbols-outlined">
-                        search
-                    </span>
-                </dd>
+                <Link to="/trips" className='link'>
+                    <dd>
+                        <span className="material-symbols-outlined">
+                            search
+                        </span>
+                    </dd>
+                </Link>
 
 
             </dl>

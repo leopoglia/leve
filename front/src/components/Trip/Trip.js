@@ -29,10 +29,10 @@ export default function Trip() {
             <main>
 
                 <div className="name">
-                    {/* <h1>{trip.localDesembarque.localizacao}</h1> */}
+                    <h1>{trip?.localDesembarque.localizacao}</h1>
 
                     <span className="desc">
-                        Coliseu, também conhecido como Anfiteatro Flaviano, é um anfiteatro oval localizado no centro da cidade de Roma, capital da Itália. Construído com tijolos revestidos de argamassa e areia, e originalmente cobertos com travertino é o maior anfiteatro já construído e está situado a leste do Fórum Romano.
+                        {trip?.localDesembarque.descricao}
                     </span>
 
                     <div className="infos">
@@ -42,11 +42,11 @@ export default function Trip() {
                                     trip_origin
                                 </span>
 
-                                <span>&nbsp; Jaraguá do Sul</span>
+                                <span>&nbsp; {trip?.localEmbarque.localizacao}</span>
                                 <span className="material-symbols-outlined">
                                     chevron_right
                                 </span>
-                                <span>Roma</span>
+                                <span>{trip?.localDesembarque.localizacao}</span>
                             </div>
 
                             <div className="date">
@@ -54,22 +54,22 @@ export default function Trip() {
                                     calendar_month
                                 </span>
 
-                                <span>&nbsp; 24/10/2022</span>
+                                <span>&nbsp; {trip?.dataSaida}</span>
                                 <span className="material-symbols-outlined">
                                     chevron_right
                                 </span>
-                                <span>&nbsp; 28/10/2022</span>
+                                <span>&nbsp; {trip?.dataChegada}</span>
                             </div>
                         </div>
 
                         <div className="price-buy">
-                            <div className="price">R$ 2.500,00</div>
+                            <div className="price">R${trip?.valor}</div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
                 </div>
 
-                <img src="https://midias.correiobraziliense.com.br/_midias/jpg/2022/06/20/675x450/1__124279680_gettyimages_599134940-25899615.jpg?20220620141331?20220620141331" />
+                <img src={trip?.localDesembarque.imagem} />
 
 
 
