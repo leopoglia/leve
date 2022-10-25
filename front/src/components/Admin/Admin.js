@@ -26,9 +26,11 @@ export default function Admin() {
     }
 
     const [assento, setAssento] = useState("");
+    const [identificador, setIdentificador] = useState("");
     function cadastrarTransporte() {
         const transporte = {
-            assento: assento
+            assento: assento,
+            identificador: identificador
         }
 
         Services.cadastrarTransporte(transporte);
@@ -112,6 +114,13 @@ export default function Admin() {
 
             {input === 'transporte' &&
                 <div className="form">
+                    <label>Identificador</label>
+                    <input type="text"
+                        value={identificador}
+                        onChange={(e) => setIdentificador(e.target.value)}
+                    />
+
+
                     <label>Números de assentos</label>
                     <input type="text"
                         value={assento}

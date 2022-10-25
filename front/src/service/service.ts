@@ -11,7 +11,7 @@ const Services = {
 
     cadastrarTransporte: function (transporte) {
         return new Promise((resolve, reject) => {
-            fetch(url + '/transporte', { method: 'POST', body: JSON.stringify({ numeroAssentos: transporte.assento }), headers: { 'Content-Type': 'application/json' } }).then(function (result) { return result.json(); }).then(resolve).catch(resolve)
+            fetch(url + '/transporte', { method: 'POST', body: JSON.stringify({ numeroAssentos: transporte.assento , identificador: transporte.identificador}), headers: { 'Content-Type': 'application/json' } }).then(function (result) { return result.json(); }).then(resolve).catch(resolve)
         })
     }
 }
