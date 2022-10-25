@@ -22,5 +22,3 @@ public class Assento {
     @Column(nullable = false)
     private Boolean ocupado;
 }
-
-
