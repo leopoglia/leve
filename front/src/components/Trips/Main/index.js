@@ -10,8 +10,6 @@ export default function Main() {
     useEffect(() => {
         Services.buscarViagens().then((response) => {
             setLista(response);
-            console.log(response);
-            console.log(response[0].codigoViagem);
         });
     }, []);
 

@@ -7,22 +7,18 @@ import { useState, useEffect } from "react";
 import Services from "../../service/service.ts";
 
 export default function Trip() {
-
-
-
-
-    const [trip, setTrip] = useState({});
+    const [trip, setTrip] = useState();
 
     useEffect(() => {
-        Services.buscarViagens().then((response) => {
+        Services.buscarViagem(newstr).then((response) => {
             setTrip(response);
+            console.log(trip)
             console.log(response);
-            console.log(response[0].codigoViagem);
         });
     }, []);
 
-    var url_atual = window.location.href;
-
+    var url = window.location.pathname;
+    var newstr = url.replace("/trip/", "");
 
 
     return (
@@ -33,7 +29,7 @@ export default function Trip() {
             <main>
 
                 <div className="name">
-                    <h1>Coliseu de Roma</h1>
+                    {/* <h1>{trip.localDesembarque.localizacao}</h1> */}
 
                     <span className="desc">
                         Coliseu, também conhecido como Anfiteatro Flaviano, é um anfiteatro oval localizado no centro da cidade de Roma, capital da Itália. Construído com tijolos revestidos de argamassa e areia, e originalmente cobertos com travertino é o maior anfiteatro já construído e está situado a leste do Fórum Romano.
