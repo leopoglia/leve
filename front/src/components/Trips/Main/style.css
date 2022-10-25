@@ -1,0 +1,59 @@
+.main-trips{
+    height: 100%;
+    margin: 0 5%;
+    color: rgb(50, 50, 50);
+}
+
+.main-trips h1{
+    margin-bottom: 5px;
+}
+
+
+.main-trips .trip{
+    width: 31.65%;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.main-trips .trips-list{
+    width: 100%;
+}
+
+.main-trips .trip img:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+.main-trips .trip .nome-trip{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.main-trips .trip img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
+@media(max-width: 1333px){
+    .main-trips .trip{
+        width: 31%;
+    }
+}
+
+@media(max-width: 1120px){
+    .main-trips .trip{
+        width: 47%;
+    }
+}
+
+@media(max-width: 768px){
+    .main-trips .trip{
+        width: 100%;
+    }
+}

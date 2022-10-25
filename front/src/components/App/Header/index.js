@@ -1,9 +1,13 @@
+import { Link } from 'react-router-dom';
 import './style.css';
+
 
 export default function Header() {
     return (
         <div className="header-app">
-            <img className='logo' src="./logo.png" alt="" />
+            <Link to="/">
+                <img className='logo' src="./logo.png" alt="" />
+            </Link>
 
             <dl>
 
@@ -13,7 +17,7 @@ export default function Header() {
                     </span>
                 </dd>
 
-        
+
             </dl>
         </div>
     );
