@@ -7,12 +7,25 @@ import { useState } from "react";
 export default function Admin() {
     const [input, setInput] = useState();
 
-    const [embarque, setEmbarque] = useState("aaa");
+    const [embarque, setEmbarque] = useState("");
+    const [desembarque, setDesembarque] = useState("");
+    const [saida, setSaida] = useState("");
+    const [chegada, setChegada] = useState("");
+    const [valor, setValor] = useState("");
+
 
     function cadastrarViagem() {
-        console.log("aaaaaaaa")
-        console.log(embarque)
-        Services.cadastrarViagem(input);
+        const viagem = {
+            embarque: embarque,
+            desembarque: desembarque,
+            saida: saida,
+            chegada: chegada,
+            valor: valor,
+        }
+
+        console.log(viagem)
+
+        Services.cadastrarViagem(viagem);
 
     }
 
@@ -22,45 +35,10 @@ export default function Admin() {
 
             <main />
 
-
             <div className="actions">
 
                 <div className="action" onClick={() => {
-                    setInput(<div className="form">
-                        <label >Local Embarque</label>
-                        <input type="text"
-                            onChange={event => {
-                                setEmbarque(event.target.value);
-                            }}
-                        />
-                        {embarque}
-
-                        <label>Local Dembarque</label>
-                        <input type="text" />
-
-                        <label>Data Saída</label>
-                        <input type="text" onChange={event => {
-                            this.setState({
-                                dataSaida: event.target.value
-                            });
-                        }} />
-
-                        <label>Data Cheagada</label>
-                        <input type="text" onChange={event => {
-                            this.setState({
-                                dataChegada: event.target.value
-                            });
-                        }} />
-
-                        <label>Preço</label>
-                        <input type="text" onChange={event => {
-                            this.setState({
-                                preco: event.target.value
-                            });
-                        }} />
-
-                        <button onClick={() => { cadastrarViagem() }}>Cadastrar</button>
-                    </div>)
+                    setInput('viagem')
                 }}>
                     <div>
                         <span className="material-symbols-outlined">
@@ -70,13 +48,7 @@ export default function Admin() {
                     </div>
                 </div>
                 <div className="action" onClick={() => {
-                    setInput(
-                        <div className="form">
-                            <label>Números de assentos</label>
-                            <input type="text" />
-
-                            <button>Cadastrar</button>
-                        </div>)
+                    setInput('transporte')
                 }}>
                     <div>
                         <span className="material-symbols-outlined">
@@ -86,24 +58,7 @@ export default function Admin() {
                     </div>
                 </div>
                 <div className="action" onClick={() => {
-                    setInput(
-                        <div className="form">
-                            <label>Nome localização</label>
-                            <input type="text" />
-
-                            <label>Descrição</label>
-                            <input type="text" />
-
-                            <div className="flex">
-                                <label>Imagem</label>
-                                <input id="img-loc" type="file" />
-                                <label id="img" for="img-loc">Escolher imagem</label>
-                            </div>
-
-
-                            <button>Cadastrar</button>
-                        </div>
-                    )
+                    setInput('localização')
                 }}>
                     <div>
                         <span className="material-symbols-outlined">
@@ -114,9 +69,68 @@ export default function Admin() {
                 </div>
             </div>
 
-            {input}
+            {input === 'viagem' &&
+                <div className="form">
+                    <label >Local Embarque</label>
+                    <input type="text"
+                        value={embarque}
+                        onChange={(e) => setEmbarque(e.target.value)}
+                    />
+
+                    <label>Local Dembarque</label>
+                    <input type="text"
+                        value={desembarque}
+                        onChange={(e) => setDesembarque(e.target.value)}
+                    />
+
+                    <label>Data Saída</label>
+                    <input type="text"
+                        value={saida}
+                        onChange={(e) => setSaida(e.target.value)}
+                    />
+
+                    <label>Data Cheagada</label>
+                    <input type="text"
+                        value={chegada}
+                        onChange={(e) => setChegada(e.target.value)}
+                    />
+
+                    <label>Preço</label>
+                    <input type="text"
+                        value={valor}
+                        onChange={(e) => setValor(e.target.value)}
+                    />
+
+                    <button onClick={() => { cadastrarViagem() }}>Cadastrar</button>
+                </div>
+            }
+
+            {input === 'transporte' &&
+                <div className="form">
+                    <label>Números de assentos</label>
+                    <input type="text" />
+
+                    <button>Cadastrar</button>
+                </div>}
+
+            {input === 'localização' &&
+                <div className="form">
+                    <label>Nome localização</label>
+                    <input type="text" />
+
+                    <label>Descrição</label>
+                    <input type="text" />
+
+                    <div className="flex">
+                        <label>Imagem</label>
+                        <input id="img-loc" type="file" />
+                        <label id="img" for="img-loc">Escolher imagem</label>
+                    </div>
 
 
+                    <button>Cadastrar</button>
+                </div>
+            }
         </div>
     );
 }
