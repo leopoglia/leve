@@ -22,10 +22,10 @@ public class Viagem {
     private Integer codigoViagem;
 
     @Column(nullable = false)
-    private Integer localEmbarque;
+    private String localEmbarque;
 
     @Column(nullable = false)
-    private Integer localDesembarque;
+    private String localDesembarque;
 
     @OneToMany
     @JoinColumn(name = "codigo_Parada")

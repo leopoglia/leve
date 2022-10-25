@@ -13,7 +13,6 @@ export default function Admin() {
     const [chegada, setChegada] = useState("");
     const [valor, setValor] = useState("");
 
-
     function cadastrarViagem() {
         const viagem = {
             embarque: embarque,
@@ -23,10 +22,16 @@ export default function Admin() {
             valor: valor,
         }
 
-        console.log(viagem)
-
         Services.cadastrarViagem(viagem);
+    }
 
+    const [assento, setAssento] = useState("");
+    function cadastrarTransporte() {
+        const transporte = {
+            assento: assento
+        }
+
+        Services.cadastrarTransporte(transporte);
     }
 
     return (
@@ -84,13 +89,13 @@ export default function Admin() {
                     />
 
                     <label>Data Saída</label>
-                    <input type="text"
+                    <input type="date"
                         value={saida}
                         onChange={(e) => setSaida(e.target.value)}
                     />
 
                     <label>Data Cheagada</label>
-                    <input type="text"
+                    <input type="date"
                         value={chegada}
                         onChange={(e) => setChegada(e.target.value)}
                     />
@@ -108,9 +113,13 @@ export default function Admin() {
             {input === 'transporte' &&
                 <div className="form">
                     <label>Números de assentos</label>
-                    <input type="text" />
+                    <input type="text"
+                        value={assento}
+                        onChange={(e) => setAssento(e.target.value)}
+                    />
 
-                    <button>Cadastrar</button>
+
+                    <button onClick={() => { cadastrarTransporte() }}>Cadastrar</button>
                 </div>}
 
             {input === 'localização' &&

@@ -7,6 +7,12 @@ const Services = {
         return new Promise((resolve, reject) => {
             fetch(url + '/viagem', { method: 'POST', body: JSON.stringify({ localEmbarque: viagem.embarque, localDesembarque: viagem.desembarque, dataSaida: viagem.saida, dataChegada: viagem.chegada, horaSaida: "0", horaChegada: "0", valor: viagem.valor }), headers: { 'Content-Type': 'application/json' } }).then(function (result) { return result.json(); }).then(resolve).catch(resolve)
         })
+    },
+
+    cadastrarTransporte: function (transporte) {
+        return new Promise((resolve, reject) => {
+            fetch(url + '/transporte', { method: 'POST', body: JSON.stringify({ numeroAssentos: transporte.assento }), headers: { 'Content-Type': 'application/json' } }).then(function (result) { return result.json(); }).then(resolve).catch(resolve)
+        })
     }
 }
 

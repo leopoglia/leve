@@ -10,8 +10,8 @@ import java.util.List;
 @Getter
 public class ViagemDTO {
     private Integer codigoViagem;
-    private Integer localEmbarque;
-    private Integer localDesembarque;
+    private String localEmbarque;
+    private String localDesembarque;
     private List<Localizacao> paradas;
     private Date dataSaida;
     private Date dataChegada;
