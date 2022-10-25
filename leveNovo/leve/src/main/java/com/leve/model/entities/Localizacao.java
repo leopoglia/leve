@@ -21,6 +21,9 @@ public class Localizacao {
     @Column(nullable = false)
     private String descricao;
 
+    @Column
+    private String imagem;
+
     @Column(nullable = false)
     private String localizacao;
 
