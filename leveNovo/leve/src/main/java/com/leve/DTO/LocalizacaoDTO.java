@@ -6,5 +6,6 @@ import lombok.Getter;
 public class LocalizacaoDTO {
     private Integer codigoLocalizacao;
     private String descricao;
+    private String imagem;
     private String localizacao;
 }

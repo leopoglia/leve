@@ -13,6 +13,12 @@ const Services = {
         return new Promise((resolve, reject) => {
             fetch(url + '/transporte', { method: 'POST', body: JSON.stringify({ numeroAssentos: transporte.assento , identificador: transporte.identificador}), headers: { 'Content-Type': 'application/json' } }).then(function (result) { return result.json(); }).then(resolve).catch(resolve)
         })
+    },
+
+    cadastrarLocal: function (localizacao) {
+        return new Promise((resolve, reject) => {
+            fetch(url + '/localizacao', { method: 'POST', body: JSON.stringify({ descricao: localizacao.descricao , localizacao: localizacao.localizacao, imagem: localizacao.imagem}), headers: { 'Content-Type': 'application/json' } }).then(function (result) { return result.json(); }).then(resolve).catch(resolve)
+        })
     }
 }
 

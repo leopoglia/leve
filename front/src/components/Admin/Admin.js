@@ -36,6 +36,21 @@ export default function Admin() {
         Services.cadastrarTransporte(transporte);
     }
 
+    const [localizacao, setLocalizacao] = useState("");
+    const [descricao, setDescricao] = useState("");
+    const [imagem, setImagem] = useState("");
+
+    function cadastrarLocal() {
+        const local = {
+            localizacao: localizacao,
+            descricao: descricao,
+            imagem: imagem
+        }
+
+        console.log(local);
+        Services.cadastrarLocal(local);
+    }
+
     return (
         <div className="Admin">
             <Header />
@@ -134,19 +149,32 @@ export default function Admin() {
             {input === 'localização' &&
                 <div className="form">
                     <label>Nome localização</label>
-                    <input type="text" />
+                    <input type="text"
+                        value={localizacao}
+                        onChange={(e) => setLocalizacao(e.target.value)}
+                    />
 
                     <label>Descrição</label>
-                    <input type="text" />
+                    <input type="text"
+                        value={descricao}
+                        onChange={(e) => setDescricao(e.target.value)}
+                    />
 
                     <div className="flex">
                         <label>Imagem</label>
-                        <input id="img-loc" type="file" />
-                        <label id="img" for="img-loc">Escolher imagem</label>
+                        <input type="text"
+                            value={imagem}
+                            onChange={(e) => setImagem(e.target.value)}
+                        />
+
+
+                        {/* Em breve colocar um botão para selecionar a imagem */}
+                        {/* <input id="img-loc" type="file" />
+                        <label id="img" for="img-loc">Escolher imagem</label> */}
                     </div>
 
 
-                    <button>Cadastrar</button>
+                    <button  onClick={() => { cadastrarLocal() }}>Cadastrar</button>
                 </div>
             }
         </div>
