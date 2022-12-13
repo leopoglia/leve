@@ -9,17 +9,17 @@ import Services from "../../service/service.ts";
 export default function Trip() {
     const [trip, setTrip] = useState();
 
+    const url = window.location.pathname;
+    const newstr = url.replace("/trip/", "");
+
+
     useEffect(() => {
         Services.buscarViagem(newstr).then((response) => {
             setTrip(response);
             console.log(trip)
             console.log(response);
         });
-    }, []);
-
-    var url = window.location.pathname;
-    var newstr = url.replace("/trip/", "");
-
+    }, [trip, newstr]);
 
     return (
         <div className="Trip">
@@ -69,7 +69,7 @@ export default function Trip() {
                     </div>
                 </div>
 
-                <img src={trip?.localDesembarque.imagem} />
+                <img alt="" src={trip?.localDesembarque.imagem} />
 
 
 
